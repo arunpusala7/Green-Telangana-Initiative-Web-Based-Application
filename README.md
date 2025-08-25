@@ -16,9 +16,13 @@ Project Purpose:
 
 Key Features:
 -Citizen Reporting System → Upload photos + details with precise Google Maps tagging.
+
 -Role-Based Authentication → Secure access for citizens & municipal officers via Firebase Auth.
+
 -Municipal Officer Dashboard → Track complaints with location, description, and timestamps.
+
 -Real-Time Data Management → Firestore for scalable and instant updates.
+
 -Deployment → Live, reliable hosting on Firebase.
 
 Technologies Used:
