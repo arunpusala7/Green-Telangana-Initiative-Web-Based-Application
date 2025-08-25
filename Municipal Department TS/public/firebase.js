@@ -3,13 +3,13 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth
 import { getFirestore } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCCAvmVgF58M0agRYPe80e4va3Jn9oarTg",
+  apiKey: "Hide for security reasons",
   authDomain: "municipal-department-ts.firebaseapp.com",
   projectId: "municipal-department-ts",
   storageBucket: "municipal-department-ts.firebasestorage.app",
-  messagingSenderId: "58336911713",
-  appId: "1:58336911713:web:2f631952e8d57056d8a520",
-  measurementId: "G-MRLG2CQMWK"
+  messagingSenderId: "Hide for security reasons",
+  appId: "Hide for security reasons",
+  measurementId: "Hide for security reasons"
 };
 
 const app = initializeApp(firebaseConfig);

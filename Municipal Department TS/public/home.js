@@ -25,7 +25,7 @@ const message = document.getElementById('message');
 const locationPreview = document.getElementById('locationPreview');
 const logoutButton = document.getElementById('logoutButton');
 
-const GOOGLE_API_KEY = 'AIzaSyD-x0qgL135VmquGWxNvRnAdssVCT88I2E';
+const GOOGLE_API_KEY = 'Hide for security reasons';
 const DEFAULT_LOCATION = { latitude: 28.6139, longitude: 77.2090, formatted: 'New Delhi, India' };
 
 let stream = null;

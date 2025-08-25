@@ -9,7 +9,7 @@ const planRouteButton = document.getElementById('planRouteButton');
 const routeMap = document.getElementById('routeMap');
 const routeInfo = document.getElementById('routeInfo');
 
-const GOOGLE_API_KEY = 'AIzaSyD-x0qgL135VmquGWxNvRnAdssVCT88I2E';
+const GOOGLE_API_KEY = 'Hide for security reasons';
 
 function initializeMap(latitude, longitude, elementId, address) {
   console.log('Initializing Google Map for Admin Complaint:', { latitude, longitude, elementId, address });
