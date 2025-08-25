@@ -9,12 +9,18 @@ Live Demo:
 🔗 https://municipal-department-ts.web.app/index.html
 
 Project Purpose:
+
 -Foster cleaner and healthier communities.
+
 -Bridge the gap between citizens and municipal officers.
+
 -Provide real-time waste complaint tracking.
+
 -Showcase technology for social good.
 
+
 Key Features:
+
 -Citizen Reporting System → Upload photos + details with precise Google Maps tagging.
 
 -Role-Based Authentication → Secure access for citizens & municipal officers via Firebase Auth.
@@ -26,10 +32,15 @@ Key Features:
 -Deployment → Live, reliable hosting on Firebase.
 
 Technologies Used:
+
 -Frontend → HTML, JavaScript
+
 -Authentication → Firebase Authentication
+
 -Database → Firestore Database
+
 -Maps → Google Maps API
+
 -Hosting → Firebase Hosting
 
 🌍 Impact & Vision
