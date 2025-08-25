@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Municipal Dashboard - Waste Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-x0qgL135VmquGWxNvRnAdssVCT88I2E&libraries=places,routes"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 0 0 60px 0;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 4px solid #43a047;
+      width: 100vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo-title img {
+      width: 60px;
+      height: 60px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .sub-tagline {
+      font-size: 1rem;
+      font-weight: 300;
+      margin-top: 5px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #2e7d32;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    #userEmail {
+      font-size: 1.1rem;
+      color: #2e7d32;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #complaintsList {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .complaint-card {
+      background-color: #f1f8e9;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #388e3c;
+    }
+
+    .complaint-card img {
+      max-width: 300px;
+      margin: 10px 0;
+      border-radius: 5px;
+      display: block;
+      border: 1px solid #ccc;
+    }
+
+    .complaint-card p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .status-pending {
+      color: #d32f2f;
+      font-weight: bold;
+    }
+
+    .status-resolved {
+      color: #388e3c;
+      font-weight: bold;
+    }
+
+    input[type="file"] {
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 12px 24px;
+      background-color: #43a047;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: all 0.3s ease-in-out;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #2e7d32;
+      transform: translateY(-2px);
+    }
+
+    button.delete {
+      background-color: #d32f2f;
+    }
+
+    button.delete:hover {
+      background-color: #b71c1c;
+    }
+
+    #routeMap {
+      width: 100%;
+      height: 400px;
+      margin-top: 20px;
+      border: 1px solid #388e3c;
+      border-radius: 5px;
+      display: none;
+    }
+
+    #routeInfo {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-title">
+      <img src="Emblem_of_Telangana.svg.png" alt="Telangana Logo">
+      <h1>Municipal Department Telangana</h1>
+    </div>
+    <p>Empowering citizens, streamlining waste management across Telangana</p>
+    <p class="sub-tagline">Committed to a Cleaner, Greener Telangana</p>
+  </header>
+
+  <div class="container">
+    <h2>Municipal Dashboard</h2>
+    <p id="userEmail"></p>
+    <button id="logoutButton">Logout</button>
+    <button id="planRouteButton">Plan Route</button>
+    <div id="routeMap"></div>
+    <p id="routeInfo"></p>
+    <div id="complaintsList"></div>
+  </div>
+
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="municipal.js"></script>
+</body>
+</html>

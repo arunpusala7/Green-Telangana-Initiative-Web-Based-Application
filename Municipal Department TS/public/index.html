@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Municipal Department Telangana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px 20px;
+      text-align: center;
+      position: relative;
+      border-bottom: 4px solid #43a047;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo-title img {
+      width: 60px;
+      height: 60px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .sub-tagline {
+      font-size: 1rem;
+      font-weight: 300;
+      margin-top: 5px;
+      opacity: 0.9;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      padding: 20px;
+      background-color: #e8f5e9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    nav a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 3px;
+      background-color: #2e7d32;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      background-color: #dcedc8;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 10%;
+      background-color: #e8f5e9;
+    }
+
+    .hero .text {
+      flex: 1 1 400px;
+    }
+
+    .hero .text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #2e7d32;
+    }
+
+    .hero .text p {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .hero .buttons a {
+      display: inline-block;
+      margin-right: 15px;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+
+    .hero .login {
+      background-color: #2e7d32;
+      color: white;
+    }
+
+    .hero .register {
+      background-color: #e8f5e9;
+      border: 2px solid #2e7d32;
+      color: #2e7d32;
+    }
+
+    .hero .buttons a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero .login:hover {
+      background-color: #1b5e20;
+    }
+
+    .hero .register:hover {
+      background-color: #dcedc8;
+    }
+
+    .hero img {
+      flex: 1 1 400px;
+      max-width: 500px;
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .section-content {
+      display: none;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #e8f5e9;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    .section-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section h2 {
+      color: #2e7d32;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    section ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    section ul li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #f1f1f1;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      nav a {
+        width: 80%;
+        text-align: center;
+      }
+
+      .section-content {
+        padding: 20px;
+        margin: 20px auto;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('nav a');
+      const sections = document.querySelectorAll('.section-content');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          sections.forEach(section => {
+            section.classList.remove('active');
+            if (section.id === targetId) {
+              section.classList.add('active');
+            }
+          });
+          // Hide hero and other sections, show only clicked section
+          document.querySelector('.hero').style.display = 'none';
+          document.querySelectorAll('section:not(.section-content)').forEach(sec => sec.style.display = 'none');
+        });
+      });
+
+      // Add a back button to each section
+      sections.forEach(section => {
+        const backButton = document.createElement('button');
+        backButton.textContent = 'Back to Home';
+        backButton.style.cssText = 'margin-top: 20px; padding: 10px 20px; background-color: #2e7d32; color: white; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;';
+        backButton.addEventListener('click', () => {
+          section.classList.remove('active');
+          document.querySelector('.hero').style.display = 'flex';
+          document.querySelectorAll('section:not(.section-content)').forEach(sec => sec.style.display = 'block');
+        });
+        backButton.addEventListener('mouseover', () => backButton.style.backgroundColor = '#1b5e20');
+        backButton.addEventListener('mouseout', () => backButton.style.backgroundColor = '#2e7d32');
+        section.appendChild(backButton);
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="Emblem_of_Telangana.svg.png" alt="Telangana Logo">
+      <h1>Municipal Department Telangana</h1>
+    </div>
+    
+    <p class="sub-tagline">Committed to a Cleaner, Greener Telangana</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#why-clean">Why Clean Surroundings</a>
+    <a href="#how-clean">Ways to Clean</a>
+    <a href="#mission">Our Mission</a>
+    <a href="#history">History</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <div class="text">
+      <h2>Make Your City Cleaner 🌿</h2>
+      <p>Report unattended garbage and ensure timely pickup by the municipal title. Our system bridges citizens, administrators, and waste collectors to maintain hygiene and sustainability.</p>
+      <div class="buttons">
+        <a href="login.html" class="login">Login</a>
+        <a href="register.html" class="register">Register</a>
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80" alt="Beautiful Tree">
+  </div>
+
+  <div id="about" class="section-content">
+    <h2>About Us</h2>
+    <p>With immense pride, we present a transformative Government of Telangana project, born from a deep commitment to our people and planet. The Municipal Department Telangana is dedicated to revolutionizing waste management, turning challenges into opportunities for a cleaner, greener future. Our platform empowers every citizen to report issues, connecting hearts and hands with administrators and waste collectors. Feel the warmth of community as we strive together—because a cleaner Telangana begins with us, today!</p>
+  </div>
+
+  <div id="why-clean" class="section-content">
+    <h2>Why It’s Important to Keep Surroundings Clean</h2>
+    <p>Imagine a Telangana where every breath is pure, every smile reflects pride, and every child plays in safe, green spaces. This is our dream, a Government of Telangana vision to cleanse every inch of our land. Clean surroundings aren’t just a luxury—they’re a lifeline, reducing disease, uplifting spirits, and fostering unity. Join us in this heartfelt mission: your clean street is the heartbeat of a healthier community. Let’s make Telangana a beacon of hope and hygiene!</p>
+  </div>
+
+  <div id="how-clean" class="section-content">
+    <h2>Effective Ways to Clean Your Surroundings</h2>
+    <p>Every hand matters in this Government of Telangana crusade to make Telangana spotless! Take action with love—segregate waste into biodegradable and non-biodegradable, shun littering with designated bins, and dive into local cleanup drives with passion. Educate your neighbors, plant trees with care, and if you spot garbage, click a photo, add location details, and send your complaint through our app. Together, we can transform Telangana into a cleaner, greener haven—every step counts!</p>
+  </div>
+
+  <div id="mission" class="section-content">
+    <h2>Mission Clean Telangana</h2>
+    <p>With unwavering resolve, the Government of Telangana launches Mission Clean Telangana—a statewide pledge to ignite change by 2030. This isn’t just a project; it’s a movement fueled by hope and determination to create cleaner cities and healthier villages. Every citizen’s participation is a brushstroke on this canvas of sustainability. Feel the pride as we unite to make Telangana a model of urban and rural sanitation, a legacy for generations to cherish!</p>
+  </div>
+
+  <div id="history" class="section-content">
+    <h2>Telangana’s Journey</h2>
+    <p>Our story is one of resilience and vision, rooted in the vibrant streets of Hyderabad and the serene villages of Telangana. Inspired by the Swachh Bharat Mission, the Government of Telangana embarked on this journey with a dream—to weave technology into the fabric of sanitation. Launched with passion, this initiative has grown into a beacon of progress, uniting our past struggles with a future of cleanliness and pride. Join us in this emotional odyssey!</p>
+  </div>
+
+  <div id="contact" class="section-content">
+    <h2>Contact Us</h2>
+    <p>We’re here with open hearts to support you in this Government of Telangana endeavor. Have questions or ideas? Reach out with joy at <strong>support@wasteclean.in</strong> or share your feedback through our app. Your voice fuels our mission to clean every corner of Telangana. Let’s connect and build a brighter, cleaner future together—every message matters!</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Municipal Department Telangana. All rights reserved.
+  </footer>
+</body>
+</html>

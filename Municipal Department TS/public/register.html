@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Municipal Department Telangana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #e8f5e9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid #43a047;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo-title img {
+      width: 60px;
+      height: 60px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .sub-tagline {
+      font-size: 1rem;
+      font-weight: 300;
+      margin-top: 5px;
+      opacity: 0.9;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin: 20px 40px 0;
+      background-color: transparent;
+      border: 2px solid #2e7d32;
+      color: #2e7d32;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #2e7d32;
+      color: white;
+    }
+
+    .register-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 40px 20px;
+      gap: 40px;
+      flex-wrap: wrap;
+      background-color: #e8f5e9;
+      border-radius: 12px;
+    }
+
+    .register-message {
+      flex: 1;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #2e7d32;
+      line-height: 1.3;
+    }
+
+    .register-form {
+      flex: 1;
+      max-width: 500px;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .register-form h2 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 25px;
+      font-size: 2rem;
+    }
+
+    .register-form input {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .register-form button {
+      width: 100%;
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .register-form button:hover {
+      background-color: #1b5e20;
+    }
+
+    .register-form p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    .register-form p.error {
+      color: red;
+    }
+
+    .register-form p.success {
+      color: #43a047;
+    }
+
+    .register-form a {
+      display: block;
+      margin-top: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #e8f5e9;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (max-width: 768px) {
+      .register-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .register-message {
+        font-size: 2rem;
+      }
+
+      .register-form {
+        width: 100%;
+      }
+
+      .back-button {
+        margin: 20px auto 0;
+        display: block;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-title">
+      <img src="Emblem_of_Telangana.svg.png" alt="Telangana Logo">
+      <h1>Municipal Department Telangana</h1>
+    </div>
+   
+    <p class="sub-tagline">Committed to a Cleaner, Greener Telangana</p>
+  </header>
+
+  <a href="index.html" class="back-button">← Back to Home</a>
+
+  <div class="register-section">
+    <div class="register-message">
+      One step towards <br />protecting our planet 🌍
+    </div>
+
+    <div class="register-form">
+      <h2>Register</h2>
+      <form id="registerForm">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Register</button>
+        <p id="message"></p>
+      </form>
+      <a href="login.html">Already have an account? Login</a>
+      
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Municipal Department Telangana. All rights reserved.
+  </footer>
+
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="register.js"></script>
+</body>
+</html>

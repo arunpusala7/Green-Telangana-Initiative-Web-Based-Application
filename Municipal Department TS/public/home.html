@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greener Future - User Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 4px solid #43a047;
+      width: 100vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo-title img {
+      width: 60px;
+      height: 60px;
+      margin-left: 10px;
+      margin-right: 0%;
+      
+    }
+    .logo-title img {
+  width: 60px;
+  height: 60px;
+  box-shadow: none;
+  filter: none;
+  border: none;
+  background: none;
+}
+
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .sub-tagline {
+      font-size: 1rem;
+      font-weight: 300;
+      margin-top: 5px;
+      opacity: 0.9;
+    }
+
+    .top-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 30px auto 10px auto;
+      padding: 0 20px;
+    }
+
+    .top-buttons a,
+    .top-buttons button {
+      padding: 12px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      border: 2px solid transparent;
+    }
+
+    .back-button {
+      background-color: white;
+      color: #2e7d32;
+      border: 2px solid #2e7d32;
+    }
+
+    .back-button:hover {
+      background-color: #2e7d32;
+      color: white;
+    }
+
+    .view-button {
+      background-color: white;
+      color: #2e7d32;
+      border: 2px solid #2e7d32;
+    }
+
+    .view-button:hover {
+      background-color: #2e7d32;
+      color: white;
+    }
+
+    .logout-button {
+      background-color: white;
+      color: #2e7d32;
+      border: 2px solid #2e7d32;
+    }
+
+    .logout-button:hover {
+      background-color: #d32f2f;
+      color: white;
+      border-color: #d32f2f;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #2e7d32;
+      text-align: center;
+    }
+
+    .user-info {
+      color: #388e3c;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #616161;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    video, canvas, img {
+      width: 100%;
+      max-width: 400px;
+      margin: 10px auto;
+      display: block;
+      border: 2px solid #388e3c;
+      border-radius: 5px;
+    }
+
+    textarea, input[type="text"], input[type="file"] {
+      width: 100%;
+      padding: 14px;
+      margin: 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    #locationPreview {
+      width: 100%;
+      height: 300px;
+      margin: 10px 0;
+      border: 1px solid #388e3c;
+      border-radius: 8px;
+    }
+    #complaintButton {
+  display: block;
+  margin: 20px auto;
+}
+#message {
+  font-size: 1.1rem;
+  color: #4caf50;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 14px 24px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #2e7d32;
+    }
+
+    a.button-link {
+      text-decoration: none;
+      padding: 12px 20px;
+      font-weight: 600;
+      border-radius: 6px;
+    }
+
+    p.error { color: #d32f2f; }
+    p.success { color: #4caf50; }
+    p.warning { color: #ff9800; }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #f1f1f1;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="Emblem_of_Telangana.svg.png" alt="Telangana Logo">
+      <h1>Municipal Department Telangana</h1>
+    </div>
+    <p class="sub-tagline">Committed to a Cleaner, Greener Telangana</p>
+  </header>
+
+  <!-- Top Buttons: Back | View Complaints | Logout -->
+  <div class="top-buttons">
+    <div style="flex: 1; text-align: left;">
+      <a class="back-button" href="index.html">← Back to Home</a>
+    </div>
+    <div style="flex: 1; text-align: center;">
+      <a class="view-button" href="userDashboard.html">View My Complaints</a>
+    </div>
+    <div style="flex: 1; text-align: right;">
+      <button class="logout-button" id="logoutButton">Logout</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Welcome to a Greener Future</h2>
+    <p class="user-info">Logged in as: <span id="userEmail"></span></p>
+    <p class="quote">"The earth does not belong to us; we belong to the earth." – Marlee Matlin</p>
+
+    <div class="complaint-section">
+      <video id="video" autoplay style="display: none;"></video>
+      <canvas id="canvas" style="display: none;"></canvas>
+      <img id="preview" style="display: none;" alt="Captured or Uploaded Photo">
+
+      <button id="complaintButton">Make a Complaint</button>
+
+      <form id="complaintForm" style="display: none;">
+        <textarea id="description" placeholder="Describe the waste issue..." required></textarea>
+        <input type="text" id="villageInput" placeholder="Enter your village" required>
+        <input type="text" id="districtInput" placeholder="Enter your district" required>
+        <input type="text" id="pinCodeInput" placeholder="Enter your pin code" required>
+        <input type="text" id="landmarkInput" placeholder="Nearby landmark (optional)">
+        <input type="file" id="photoUpload" accept="image/*">
+
+        <button id="useCurrentLocation" type="button">Use Current Location</button>
+        <div id="locationPreview"></div>
+
+        <div class="buttons">
+          <button id="takePhotoButton" type="button">Take Photo</button>
+          <button id="uploadButton" type="button">Upload via Device</button>
+          <button id="verifyLocationButton" type="button">Verify Location</button>
+          <button id="confirmLocationButton" type="button" style="display: none;">Confirm Location</button>
+          <button id="submitComplaint" type="submit">Submit Complaint</button>
+          <button id="cancelButton" type="button">Cancel</button>
+        </div>
+      </form>
+      <p id="message"></p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Municipal Department Telangana. All rights reserved.
+  </footer>
+
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-x0qgL135VmquGWxNvRnAdssVCT88I2E&libraries=places&callback=initMap"></script>
+  <script type="module" src="firebase.js" defer></script>
+  <script type="module" src="home.js" defer></script>
+  
+</body>
+</html>
